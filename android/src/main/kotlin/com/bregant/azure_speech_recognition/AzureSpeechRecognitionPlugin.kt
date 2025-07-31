@@ -6,7 +6,7 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugin.common.PluginRegistry.Registrar
+//import io.flutter.plugin.common.PluginRegistry.Registrar
 import com.microsoft.cognitiveservices.speech.audio.AudioConfig
 import com.microsoft.cognitiveservices.speech.intent.LanguageUnderstandingModel
 import com.microsoft.cognitiveservices.speech.intent.IntentRecognitionResult
@@ -49,12 +49,12 @@ class AzureSpeechRecognitionPlugin : FlutterPlugin, Activity(), MethodCallHandle
     }
 
     init {
-        fun registerWith(registrar: Registrar) {
-            val channel = MethodChannel(registrar.messenger(), "azure_speech_recognition")
-
-            this.azureChannel = MethodChannel(registrar.messenger(), "azure_speech_recognition")
-            this.azureChannel.setMethodCallHandler(this)
-        }
+//        fun registerWith(registrar: Registrar) {
+//            val channel = MethodChannel(registrar.messenger(), "azure_speech_recognition")
+//
+//            this.azureChannel = MethodChannel(registrar.messenger(), "azure_speech_recognition")
+//            this.azureChannel.setMethodCallHandler(this)
+//        }
 
         handler = Handler(Looper.getMainLooper())
     }
